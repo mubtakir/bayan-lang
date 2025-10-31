@@ -1,7 +1,6 @@
 {
   "name": "albayan-lang",
   "version": "1.0.0",
-  "type": "module",
   "description": "لغة البيان - لغة برمجة هجينة عربية متقدمة تجمع بين البرمجة الإجرائية والكائنية والمنطقية",
   "main": "dist/index.js",
   "bin": {
