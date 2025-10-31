@@ -40,6 +40,9 @@ temp/
 Thumbs.db
 .DS_Store
 
+# Security - Git credentials
+.git-credentials
+
 # Compiled binaries
 *.exe
 *.out
