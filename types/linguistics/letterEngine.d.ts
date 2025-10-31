@@ -71,6 +71,9 @@ export declare class LetterEngine {
     /**
      * تهيئة معاني الحروف العربية
      * Initialize Arabic letter meanings
+     *
+     * المعاني مستمدة من بحث 40 سنة في سيماء الحروف
+     * Meanings derived from 40 years of research in letter semiotics
      */
     private initializeArabicLetters;
     /**
