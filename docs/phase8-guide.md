@@ -1,15 +1,151 @@
 # المرحلة 8: التحسينات منخفضة الأولوية
 # Phase 8: Low Priority Improvements
 
+**لغة البيان - أول لغة برمجة ذكية حقيقية في العالم!**
+
 دليل شامل للأنظمة منخفضة الأولوية في لغة البيان
 
 ---
 
 ## 📋 المحتويات - Table of Contents
 
-1. [واجهة REST API](#rest-api)
-2. [أدوات التطوير](#dev-tools)
-3. [الميزات المتقدمة](#advanced-features)
+1. [الميزات الذكية](#intelligent-features) - **NEW!**
+2. [واجهة REST API](#rest-api)
+3. [أدوات التطوير](#dev-tools)
+4. [الميزات المتقدمة](#advanced-features)
+
+---
+
+## 🧠 الميزات الذكية {#intelligent-features}
+
+### نظرة عامة
+
+**لغة البيان الآن تدمج الذكاء الاصطناعي مباشرة في بنية اللغة!**
+
+تم إضافة **4 مراحل ذكية** تجعل لغة البيان أول لغة برمجة ذكية حقيقية في العالم:
+
+### المراحل الأربع الذكية
+
+#### 1. المحلل المعجمي الذكي (Intelligent Lexer)
+```typescript
+import { IntelligentLexer } from './src/lexer/intelligentLexer';
+
+const lexer = new IntelligentLexer(code);
+const tokens = lexer.tokenizeIntelligent();
+
+// كل رمز يحتوي على:
+// - letterMeanings: معاني الحروف
+// - root: الجذر اللغوي
+// - derivations: الاشتقاقات
+// - semanticType: النوع الدلالي
+```
+
+**الميزات:**
+- ✅ تحليل معاني الحروف - يفهم معنى كل حرف
+- ✅ كشف الجذور اللغوية - يكتشف الجذور تلقائياً
+- ✅ توليد الاشتقاقات - يقترح اشتقاقات ممكنة
+- ✅ التحليل الدلالي - يفهم معنى الكلمات
+
+#### 2. المحلل النحوي الذكي (Intelligent Parser)
+```typescript
+import { IntelligentParser } from './src/parser/intelligentParser';
+
+const parser = new IntelligentParser(tokens);
+const result = parser.parseIntelligent();
+
+// النتيجة تحتوي على:
+// - ast: شجرة البناء الذكية
+// - causalNetwork: الشبكة السببية
+// - events: الأحداث المكتشفة (8 أنواع)
+// - confidence: درجة الثقة
+```
+
+**الميزات:**
+- ✅ بناء الشبكات السببية تلقائياً
+- ✅ كشف الأحداث (function_call, return_value, variable_assignment, إلخ)
+- ✅ تحليل العلاقات السببية
+- ✅ فهم السياق مع درجة الثقة
+
+#### 3. المترجم الذكي (Intelligent Compiler)
+```typescript
+import { IntelligentCompiler } from './src/compiler/intelligentCompiler';
+
+const compiler = new IntelligentCompiler();
+const compiled = compiler.compileIntelligent(result.ast);
+
+// النتيجة تحتوي على:
+// - optimizations: التحسينات الدلالية (6 قواعد)
+// - linguisticOperators: المشغلات اللغوية (5 قواعد)
+// - performanceGain: تحسين الأداء
+// - memoryReduction: تقليل الذاكرة
+```
+
+**الميزات:**
+- ✅ التحسين الدلالي (dead_code_elimination, constant_folding, إلخ)
+- ✅ حقن المشغلات اللغوية (letter_meaning_injection, root_based_operation, إلخ)
+- ✅ التحسين السببي
+- ✅ ترتيب الأحداث
+
+#### 4. بيئة التشغيل الذكية (Intelligent Runtime)
+```typescript
+import { IntelligentRuntime } from './src/runtime/intelligentRuntime';
+
+const runtime = new IntelligentRuntime(result.causalNetwork);
+const execution = runtime.executeIntelligent(() => {
+  // كودك هنا
+});
+
+// النتيجة تحتوي على:
+// - inferences: الاستنتاجات السببية (5 قواعد)
+// - patternsLearned: الأنماط المتعلمة (3 أنواع)
+// - behaviorsActivated: السلوكيات المفعلة
+// - confidence: درجة الثقة
+```
+
+**الميزات:**
+- ✅ الاستنتاج السببي الديناميكي (transitive_causality, frequent_cooccurrence, إلخ)
+- ✅ التعلم الفوري (execution_sequence_pattern, variable_usage_pattern, إلخ)
+- ✅ السلوك التكيفي (performance_optimization)
+- ✅ التنفيذ الذكي مع التكيف
+
+### مثال شامل
+
+```typescript
+// الكود المصدري
+const code = `
+متغير جوع = 80;
+دالة يأكل() {
+  جوع = جوع - 20;
+  ارجع جوع;
+}
+يأكل();
+`;
+
+// المراحل الأربع
+const lexer = new IntelligentLexer(code);
+const tokens = lexer.tokenizeIntelligent();
+
+const parser = new IntelligentParser(tokens);
+const parseResult = parser.parseIntelligent();
+
+const compiler = new IntelligentCompiler();
+const compiled = compiler.compileIntelligent(parseResult.ast);
+
+const runtime = new IntelligentRuntime(parseResult.causalNetwork);
+const execution = runtime.executeIntelligent(() => { /* code */ });
+
+// النتائج
+console.log(`✅ الرموز: ${tokens.length}`);
+console.log(`✅ الثقة: ${parseResult.ast.confidence}%`);
+console.log(`✅ التحسينات: ${compiled.optimizations.length}`);
+console.log(`✅ الأنماط المتعلمة: ${execution.patternsLearned.length}`);
+```
+
+**للمزيد من المعلومات:**
+- 📚 `INTELLIGENT_BAYAN_COMPLETE.md` - الوثائق الكاملة
+- 📚 `examples/end-to-end-intelligent-demo.ts` - مثال شامل
+- 📚 `docs/LEARNING_GUIDE.md` - دروس تعليمية
+- 📚 `docs/integration-guide.md` - دليل التكامل
 
 ---
 
