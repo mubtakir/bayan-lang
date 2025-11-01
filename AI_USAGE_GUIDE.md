@@ -1,5 +1,10 @@
 # 🤖 دليل استخدام الذكاء الاصطناعي مع البيان - AI Usage Guide for Bayan
 
+## 🌟 البيان - أول لغة برمجة ذكية حقيقية في العالم!
+## Bayan - The World's First Truly Intelligent Programming Language!
+
+---
+
 ## ❓ السؤال - The Question
 
 > "إذا دخلت على نموذج ذكاء اصطناعي وطلبت منه كود معين بلغة البيان، فهل لابد أن أتيح له كل الملفات التي أنشأناها أم هناك طريق مختصر ليفهم كل شيء؟"
@@ -16,8 +21,8 @@
 
 There are only **two short files** you need:
 
-1. **[AI_QUICK_REFERENCE.md](./AI_QUICK_REFERENCE.md)** - مرجع سريع (صفحة واحدة)
-2. **[AI_PROMPT.md](./AI_PROMPT.md)** - مرجع كامل (3 صفحات)
+1. **[AI_QUICK_REFERENCE.md](./AI_QUICK_REFERENCE.md)** - مرجع سريع (صفحة واحدة) - **Updated with Intelligent Features!**
+2. **[INTELLIGENT_BAYAN_COMPLETE.md](./INTELLIGENT_BAYAN_COMPLETE.md)** - وثائق كاملة للميزات الذكية - **NEW!**
 
 ---
 
@@ -367,8 +372,65 @@ Now write me a counter app in Bayan language with both English and Arabic versio
 
 ---
 
-**🤖 AI + Bayan = Unlimited Possibilities!**  
-**🤖 الذكاء الاصطناعي + البيان = إمكانيات لا محدودة!**
+## 💡 مثال 4: استخدام الميزات الذكية - Intelligent Features Example
+
+**ما ترسله للذكاء الاصطناعي:**
+
+```
+[Paste AI_QUICK_REFERENCE.md content]
+
+Now write me a Bayan program that uses intelligent features:
+- Use intelligent lexer to analyze Arabic words
+- Build causal network for function relationships
+- Show how the system learns from execution patterns
+```
+
+**النتيجة المتوقعة:**
+
+```typescript
+import { IntelligentLexer } from './src/lexer/intelligentLexer';
+import { IntelligentParser } from './src/parser/intelligentParser';
+import { IntelligentCompiler } from './src/compiler/intelligentCompiler';
+import { IntelligentRuntime } from './src/runtime/intelligentRuntime';
+
+const code = `
+متغير جوع = 80;
+دالة يأكل() {
+  جوع = جوع - 20;
+  ارجع جوع;
+}
+يأكل();
+`;
+
+// Phase 1: Intelligent Lexer - analyzes letter meanings
+const lexer = new IntelligentLexer(code);
+const tokens = lexer.tokenizeIntelligent();
+
+// Phase 2: Intelligent Parser - builds causal network
+const parser = new IntelligentParser(tokens);
+const parseResult = parser.parseIntelligent();
+
+// Phase 3: Intelligent Compiler - optimizes semantically
+const compiler = new IntelligentCompiler();
+const compiled = compiler.compileIntelligent(parseResult.ast);
+
+// Phase 4: Intelligent Runtime - learns and adapts
+const runtime = new IntelligentRuntime(parseResult.causalNetwork);
+const execution = runtime.executeIntelligent(() => { /* code */ });
+
+console.log('Patterns Learned:', execution.patternsLearned.length);
+```
+
+---
+
+**🤖 AI + Bayan = The World's First Intelligent Programming Language!**
+**🤖 الذكاء الاصطناعي + البيان = أول لغة برمجة ذكية في العالم!**
+
+**🌟 New Intelligent Features:**
+- ✅ Letter meaning analysis - تحليل معاني الحروف
+- ✅ Causal network construction - بناء الشبكات السببية
+- ✅ Semantic optimization - التحسين الدلالي
+- ✅ Real-time learning - التعلم الفوري
 
 </div>
 

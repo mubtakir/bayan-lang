@@ -6,9 +6,33 @@
 
 ## What is Bayan? - ما هي البيان؟
 
-**Bayan** is a **bilingual programming language** with **English + Arabic** keywords. It compiles to JavaScript.
+**Bayan** is the **world's first truly intelligent programming language** with **English + Arabic** keywords. It compiles to JavaScript.
 
-**البيان** لغة برمجة **ثنائية اللغة** بكلمات مفتاحية **إنجليزية + عربية**. تُترجم إلى JavaScript.
+**البيان** هي **أول لغة برمجة ذكية حقيقية في العالم** بكلمات مفتاحية **إنجليزية + عربية**. تُترجم إلى JavaScript.
+
+### 🌟 Revolutionary Intelligence Features - الميزات الذكية الثورية
+
+**Bayan integrates AI directly into the language structure:**
+
+1. **Intelligent Lexer** - المحلل المعجمي الذكي
+   - Understands letter meanings (معاني الحروف)
+   - Detects linguistic roots (الجذور اللغوية)
+   - Generates derivations (الاشتقاقات)
+
+2. **Intelligent Parser** - المحلل النحوي الذكي
+   - Builds causal networks automatically (الشبكات السببية)
+   - Detects events and relationships (الأحداث والعلاقات)
+   - Context understanding (فهم السياق)
+
+3. **Intelligent Compiler** - المترجم الذكي
+   - Semantic optimization (التحسين الدلالي)
+   - Linguistic operator injection (حقن المشغلات اللغوية)
+   - Causal optimization (التحسين السببي)
+
+4. **Intelligent Runtime** - بيئة التشغيل الذكية
+   - Dynamic causal inference (الاستنتاج السببي الديناميكي)
+   - Real-time learning (التعلم الفوري)
+   - Adaptive behavior (السلوك التكيفي)
 
 ---
 
@@ -570,30 +594,144 @@ Bayan comes with **TWO IDE options**:
 
 ---
 
-## 📝 Updated Generation Guidelines - إرشادات التوليد المحدثة
+## 🧠 Intelligent Features Usage - استخدام الميزات الذكية
 
-When generating Bayan code with **Baserah AI**:
+### Using Intelligent Lexer - استخدام المحلل المعجمي الذكي
 
-1. Use `mother_equation()` to create objects
-2. Use `.static_property()` for unchanging properties
-3. Use `.state()` for time-dependent states
-4. Use linguistic operators: `Go`, `Affect`, `Transform`, etc.
-5. Track state changes over time
-6. Use both English and Arabic versions
+```typescript
+import { IntelligentLexer } from './src/lexer/intelligentLexer';
 
-### Example Request - مثال طلب
+const code = `
+متغير جوع = 80;
+دالة يأكل() {
+  جوع = جوع - 20;
+  ارجع جوع;
+}
+`;
 
+const lexer = new IntelligentLexer(code);
+const tokens = lexer.tokenizeIntelligent();
+
+// Each token now has:
+// - letterMeanings: معاني الحروف
+// - root: الجذر اللغوي
+// - derivations: الاشتقاقات
+// - semanticType: النوع الدلالي
 ```
-Write a Bayan program using Baserah AI to model:
-- A car moving from home to work
-- The car's speed changes during the journey
-- Use both English and Arabic versions
+
+### Using Intelligent Parser - استخدام المحلل النحوي الذكي
+
+```typescript
+import { IntelligentParser } from './src/parser/intelligentParser';
+
+const parser = new IntelligentParser(tokens);
+const result = parser.parseIntelligent();
+
+// Result includes:
+// - ast: شجرة البناء الذكية
+// - causalNetwork: الشبكة السببية
+// - events: الأحداث المكتشفة
+// - confidence: درجة الثقة
+```
+
+### Using Intelligent Compiler - استخدام المترجم الذكي
+
+```typescript
+import { IntelligentCompiler } from './src/compiler/intelligentCompiler';
+
+const compiler = new IntelligentCompiler();
+const compiled = compiler.compileIntelligent(result.ast);
+
+// Compilation includes:
+// - optimizations: التحسينات الدلالية
+// - linguisticOperators: المشغلات اللغوية
+// - performanceGain: تحسين الأداء
+// - memoryReduction: تقليل الذاكرة
+```
+
+### Using Intelligent Runtime - استخدام بيئة التشغيل الذكية
+
+```typescript
+import { IntelligentRuntime } from './src/runtime/intelligentRuntime';
+
+const runtime = new IntelligentRuntime(result.causalNetwork);
+const execution = runtime.executeIntelligent(() => {
+  // Your code here
+});
+
+// Execution includes:
+// - inferences: الاستنتاجات السببية
+// - patternsLearned: الأنماط المتعلمة
+// - behaviorsActivated: السلوكيات المفعلة
+// - confidence: درجة الثقة
 ```
 
 ---
 
-**🎉 Bayan now includes AI-powered mathematical modeling! 🎉**
-**🎉 البيان الآن تتضمن نمذجة رياضية مدعومة بالذكاء الاصطناعي! 🎉**
+## 📝 Updated Generation Guidelines - إرشادات التوليد المحدثة
+
+When generating Bayan code with **Intelligent Features**:
+
+1. **Use intelligent lexer** for letter meaning analysis
+2. **Use intelligent parser** for causal network construction
+3. **Use intelligent compiler** for semantic optimization
+4. **Use intelligent runtime** for real-time learning
+5. **Leverage letter meanings** (ب for entry, ك for similarity, ل for ownership)
+6. **Build causal networks** automatically from code structure
+7. **Optimize based on semantic understanding** not just syntax
+8. **Learn from execution patterns** and adapt behavior
+9. Use both English and Arabic versions
+
+### Example Request - مثال طلب
+
+```
+Write a Bayan program with intelligent features:
+- Use intelligent lexer to analyze Arabic words
+- Build causal network for function relationships
+- Optimize code semantically
+- Learn from execution patterns
+- Use both English and Arabic versions
+```
+
+### Intelligent Code Example - مثال كود ذكي
+
+```typescript
+// The intelligent system will:
+// 1. Analyze letter meanings: ي-أ-ك-ل (eating action)
+// 2. Build causal network: يأكل → جوع (prevents), يأكل → طاقة (enhances)
+// 3. Optimize: constant folding, event ordering
+// 4. Learn: execution patterns, variable usage
+
+متغير جوع = 80;
+متغير طاقة = 60;
+
+دالة يأكل() {
+  جوع = جوع - 20;  // Causal effect: reduces hunger
+  طاقة = طاقة + 15; // Causal effect: increases energy
+  ارجع جوع;
+}
+
+دالة ينام() {
+  طاقة = طاقة + 20; // Causal effect: increases energy
+  ارجع طاقة;
+}
+
+يأكل();  // Event detected
+ينام();  // Event detected
+يأكل();  // Pattern learned: eating → sleeping → eating
+```
+
+---
+
+**🎉 Bayan is the world's first truly intelligent programming language! 🎉**
+**🎉 البيان هي أول لغة برمجة ذكية حقيقية في العالم! 🎉**
+
+**Features:**
+- ✅ Understands letter meanings - تفهم معاني الحروف
+- ✅ Builds causal networks - تبني شبكات سببية
+- ✅ Optimizes semantically - تحسن دلالياً
+- ✅ Learns in real-time - تتعلم فورياً
+- ✅ Adapts behavior - تتكيف مع الأنماط
 
 </div>
 
