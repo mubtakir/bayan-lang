@@ -47,28 +47,28 @@ export enum LinguisticRole {
  * Role Symbol Mapping - رموز الأدوار اللغوية
  */
 export const RoleSymbols = {
-  // Arabic Symbols - الرموز العربية
-  'ف': LinguisticRole.AGENT,        // فاعل
-  'م': LinguisticRole.PATIENT,      // مفعول
-  'ع': LinguisticRole.ACTION,       // فعل (عمل)
-  'أ': LinguisticRole.INSTRUMENT,   // أداة
-  'ك': LinguisticRole.LOCATION,     // مكان
-  'ز': LinguisticRole.TIME,         // زمان
-  'ح': LinguisticRole.MANNER,       // حال
-  'س': LinguisticRole.REASON,       // سبب
-  'ن': LinguisticRole.RESULT,       // نتيجة
-  'ش': LinguisticRole.CONDITION,    // شرط
-  'ق': LinguisticRole.RELATION,     // علاقة
-  'ص': LinguisticRole.MODIFIER,     // صفة
-  'ل': LinguisticRole.POSSESSOR,    // مالك
-  'و': LinguisticRole.POSSESSED,    // مملوك
-  'ب': LinguisticRole.CAUSE,        // مسبب
-  'ت': LinguisticRole.EFFECT,       // أثر (تأثير)
-  'ن': LinguisticRole.ENABLER,      // ممكن
-  'ع': LinguisticRole.PREVENTER,    // معطل (عائق)
-  'ح': LinguisticRole.CATALYST,     // محفز
-  'ط': LinguisticRole.INHIBITOR,    // معطل
-  
+  // Arabic Symbols - الرموز العربية (two-letter symbols for clarity and uniqueness)
+  'فا': LinguisticRole.AGENT,        // فاعل
+  'مف': LinguisticRole.PATIENT,      // مفعول
+  'فع': LinguisticRole.ACTION,       // فعل
+  'أد': LinguisticRole.INSTRUMENT,   // أداة
+  'مك': LinguisticRole.LOCATION,     // مكان
+  'زم': LinguisticRole.TIME,         // زمان
+  'حا': LinguisticRole.MANNER,       // حال
+  'سب': LinguisticRole.REASON,       // سبب
+  'نت': LinguisticRole.RESULT,       // نتيجة
+  'شر': LinguisticRole.CONDITION,    // شرط
+  'عل': LinguisticRole.RELATION,     // علاقة
+  'صف': LinguisticRole.MODIFIER,     // صفة
+  'مل': LinguisticRole.POSSESSOR,    // مالك
+  'مم': LinguisticRole.POSSESSED,    // مملوك
+  'مس': LinguisticRole.CAUSE,        // مسبب
+  'أث': LinguisticRole.EFFECT,       // أثر
+  'كن': LinguisticRole.ENABLER,      // ممكّن (تمكين)
+  'من': LinguisticRole.PREVENTER,    // مانع
+  'مح': LinguisticRole.CATALYST,     // محفز
+  'مع': LinguisticRole.INHIBITOR,    // معطل
+
   // English Symbols
   'AG': LinguisticRole.AGENT,
   'PT': LinguisticRole.PATIENT,
