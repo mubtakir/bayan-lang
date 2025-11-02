@@ -25,29 +25,33 @@ Every entity in a linguistic equation has a **role** that defines its function:
 
 #### Core Roles - الأدوار الأساسية
 
-| Role | Arabic | Symbol | Description |
-|------|--------|--------|-------------|
-| Agent | فاعل | ف / AG | The one who performs the action |
-| Patient | مفعول | م / PT | The one affected by the action |
-| Action | فعل | ع / AC | The action itself |
-| Instrument | أداة | أ / IN | The tool/instrument used |
-| Location | مكان | ك / LC | The location |
-| Time | زمان | ز / TM | The time |
-| Manner | حال | ح / MN | The manner/state |
-| Reason | سبب | س / RS | The reason/cause |
-| Result | نتيجة | ن / RE | The result/effect |
-| Condition | شرط | ش / CD | The condition |
+| Role | Arabic | Arabic Symbol | English Symbol | Description |
+|------|--------|---------------|----------------|-------------|
+| Agent | فاعل | فا | AG | The one who performs the action |
+| Patient | مفعول | مف | PT | The one affected by the action |
+| Action | فعل | فع | AC | The action itself |
+| Instrument | أداة | أد | IN | The tool/instrument used |
+| Location | مكان | مك | LC | The location |
+| Time | زمان | زم | TM | The time |
+| Manner | حال | حا | MN | The manner/state |
+| Reason | سبب | سب | RS | The reason/cause |
+| Result | نتيجة | نت | RE | The result/effect |
+| Condition | شرط | شر | CD | The condition |
+| Relation | علاقة | عل | RL | The relation |
+| Modifier | صفة | صف | MD | The modifier/attribute |
+| Possessor | مالك | مل | PS | The possessor/owner |
+| Possessed | مملوك | مم | PD | The possessed/owned |
 
 #### Causal Roles - الأدوار السببية
 
-| Role | Arabic | Symbol | Description |
-|------|--------|--------|-------------|
-| Cause | مسبب | ب / CS | The causer |
-| Effect | أثر | ت / EF | The effect |
-| Enabler | ممكن | ن / EN | The enabler |
-| Preventer | مانع | ع / PR | The preventer |
-| Catalyst | محفز | ح / CT | The catalyst |
-| Inhibitor | معطل | ط / IH | The inhibitor |
+| Role | Arabic | Arabic Symbol | English Symbol | Description |
+|------|--------|---------------|----------------|-------------|
+| Cause | مسبب | مس | CS | The causer |
+| Effect | أثر | أث | EF | The effect |
+| Enabler | ممكن | كن | EN | The enabler |
+| Preventer | مانع | من | PR | The preventer |
+| Catalyst | محفز | مح | CT | The catalyst |
+| Inhibitor | معطل | مع | IH | The inhibitor |
 
 ### 2. Operators - المشغلات
 

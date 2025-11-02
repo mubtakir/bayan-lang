@@ -734,17 +734,30 @@ Write a Bayan program with intelligent features:
 
 ### Linguistic Roles - الأدوار اللغوية
 
-**20 roles with symbols:**
+**20 roles with two-letter symbols (رموز بحرفين):**
 
-| Role | Arabic | Symbol | Description |
-|------|--------|--------|-------------|
-| Agent | فاعل | ف / AG | The one who performs |
-| Patient | مفعول | م / PT | The one affected |
-| Action | فعل | ع / AC | The action |
-| Cause | مسبب | ب / CS | The causer |
-| Effect | أثر | ت / EF | The effect |
-| Enabler | ممكن | ن / EN | The enabler |
-| Preventer | مانع | ع / PR | The preventer |
+| Role | Arabic | Arabic Symbol | English Symbol | Description |
+|------|--------|---------------|----------------|-------------|
+| Agent | فاعل | فا | AG | The one who performs |
+| Patient | مفعول | مف | PT | The one affected |
+| Action | فعل | فع | AC | The action |
+| Instrument | أداة | أد | IN | The tool/instrument |
+| Location | مكان | مك | LC | The location |
+| Time | زمان | زم | TM | The time |
+| Manner | حال | حا | MN | The manner/state |
+| Reason | سبب | سب | RS | The reason |
+| Result | نتيجة | نت | RE | The result |
+| Condition | شرط | شر | CD | The condition |
+| Relation | علاقة | عل | RL | The relation |
+| Modifier | صفة | صف | MD | The modifier |
+| Possessor | مالك | مل | PS | The possessor |
+| Possessed | مملوك | مم | PD | The possessed |
+| Cause | مسبب | مس | CS | The causer |
+| Effect | أثر | أث | EF | The effect |
+| Enabler | ممكن | كن | EN | The enabler |
+| Preventer | مانع | من | PR | The preventer |
+| Catalyst | محفز | مح | CT | The catalyst |
+| Inhibitor | معطل | مع | IH | The inhibitor |
 
 ### Operators - المشغلات
 
