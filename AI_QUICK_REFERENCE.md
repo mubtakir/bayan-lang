@@ -34,6 +34,13 @@
    - Real-time learning (التعلم الفوري)
    - Adaptive behavior (السلوك التكيفي)
 
+5. **Linguistic Equations System** - نظام المعادلات اللغوية ⭐ **NEW!**
+   - 20 linguistic roles (20 دور لغوي)
+   - 8 built-in operators (8 مشغلات مدمجة)
+   - Custom operators (مشغلات مخصصة)
+   - Result cancellation (تعطيل النتائج)
+   - Scientific reasoning (التفكير العلمي)
+
 ---
 
 ## Keywords - الكلمات المفتاحية
@@ -723,12 +730,100 @@ Write a Bayan program with intelligent features:
 
 ---
 
+## 🧮 Linguistic Equations - المعادلات اللغوية
+
+### Linguistic Roles - الأدوار اللغوية
+
+**20 roles with symbols:**
+
+| Role | Arabic | Symbol | Description |
+|------|--------|--------|-------------|
+| Agent | فاعل | ف / AG | The one who performs |
+| Patient | مفعول | م / PT | The one affected |
+| Action | فعل | ع / AC | The action |
+| Cause | مسبب | ب / CS | The causer |
+| Effect | أثر | ت / EF | The effect |
+| Enabler | ممكن | ن / EN | The enabler |
+| Preventer | مانع | ع / PR | The preventer |
+
+### Operators - المشغلات
+
+**8 built-in operators:**
+
+| Symbol | Arabic | English | Usage |
+|--------|--------|---------|-------|
+| → | يسبب | causes | A → B |
+| ⊢ | يمكن | enables | A ⊢ B |
+| ⊣ | يمنع | prevents | A ⊣ B |
+| ⊳ | يحفز | triggers | A ⊳ B |
+| ⊲ | يعطل | inhibits | A ⊲ B |
+| ⇒ | يحول | transforms | A ⇒ B |
+| ↑ | يزيد | increases | A ↑ B |
+| ↓ | ينقص | decreases | A ↓ B |
+
+### Example - مثال
+
+```typescript
+import { LinguisticEquationEngine, LinguisticRole } from './src/linguistic-equations';
+
+const engine = new LinguisticEquationEngine();
+
+// Create entities - إنشاء الكيانات
+const ahmed = engine.createEntity('أحمد', LinguisticRole.AGENT, new Map([
+  ['وحشية', 50],
+]));
+
+const khalid = engine.createEntity('خالد', LinguisticRole.PATIENT);
+
+// Create equation - إنشاء المعادلة
+// أحمد اعتدى على خالد → زادت وحشية أحمد
+const equation = engine.createEquation(
+  'Attack increases aggression',
+  'الاعتداء يزيد الوحشية',
+  [ahmed, khalid],
+  []
+);
+
+// Execute - تنفيذ
+const event = engine.executeEquation(equation);
+
+console.log(ahmed.attributes.get('وحشية')); // 70 (increased!)
+```
+
+### Custom Operators - المشغلات المخصصة
+
+```typescript
+import { CustomOperatorBuilder } from './src/linguistic-equations';
+
+// Define custom operator - تعريف مشغل مخصص
+const doublesOp = new CustomOperatorBuilder()
+  .withSymbol('×2')
+  .withName('يضاعف')
+  .withNameEn('doubles')
+  .withDescription('Doubles numeric attributes')
+  .withImplementation(`
+    const [entity] = entities;
+    entity.attributes.forEach((value, key) => {
+      if (typeof value === 'number') {
+        entity.attributes.set(key, value * 2);
+      }
+    });
+    return [entity];
+  `)
+  .build();
+
+engine.defineCustomOperator(doublesOp);
+```
+
+---
+
 **🎉 Bayan is the world's first truly intelligent programming language! 🎉**
 **🎉 البيان هي أول لغة برمجة ذكية حقيقية في العالم! 🎉**
 
 **Features:**
 - ✅ Understands letter meanings - تفهم معاني الحروف
 - ✅ Builds causal networks - تبني شبكات سببية
+- ✅ Linguistic equations - المعادلات اللغوية ⭐ **NEW!**
 - ✅ Optimizes semantically - تحسن دلالياً
 - ✅ Learns in real-time - تتعلم فورياً
 - ✅ Adapts behavior - تتكيف مع الأنماط

@@ -47,6 +47,13 @@
    - تتكيف مع الأنماط
    - تحسن الأداء تلقائياً
 
+5. **نظام المعادلات اللغوية (Linguistic Equations System)** ⭐ **جديد!**
+   - 20 دور لغوي (فاعل، مفعول، فعل، إلخ)
+   - 8 مشغلات مدمجة (→، ⊢، ⊣، إلخ)
+   - مشغلات مخصصة غير محدودة
+   - تعطيل النتائج الشرطي
+   - التفكير العلمي في الكود
+
 **مثال بسيط:**
 
 ```javascript
@@ -599,14 +606,91 @@ for (let i = 0; i < 3; i++) {
 
 ---
 
+### الدرس 5: المعادلات اللغوية ⭐ **جديد!**
+
+```typescript
+import {
+  LinguisticEquationEngine,
+  LinguisticRole,
+  CustomOperatorBuilder,
+} from './src/linguistic-equations';
+
+// إنشاء المحرك
+const engine = new LinguisticEquationEngine();
+
+// إنشاء الكيانات
+const ahmed = engine.createEntity('أحمد', LinguisticRole.AGENT, new Map([
+  ['وحشية', 50],
+]));
+
+const khalid = engine.createEntity('خالد', LinguisticRole.PATIENT);
+
+// إنشاء معادلة: أحمد اعتدى على خالد → زادت وحشية أحمد
+const equation = engine.createEquation(
+  'Attack increases aggression',
+  'الاعتداء يزيد الوحشية',
+  [ahmed, khalid],
+  []
+);
+
+// تنفيذ المعادلة
+const event = engine.executeEquation(equation);
+
+console.log('وحشية أحمد قبل:', 50);
+console.log('وحشية أحمد بعد:', ahmed.attributes.get('وحشية')); // 70
+
+// تعريف مشغل مخصص
+const doublesOp = new CustomOperatorBuilder()
+  .withSymbol('×2')
+  .withName('يضاعف')
+  .withNameEn('doubles')
+  .withDescription('يضاعف القيم الرقمية')
+  .withImplementation(`
+    const [entity] = entities;
+    entity.attributes.forEach((value, key) => {
+      if (typeof value === 'number') {
+        entity.attributes.set(key, value * 2);
+      }
+    });
+    return [entity];
+  `)
+  .build();
+
+engine.defineCustomOperator(doublesOp);
+
+// استخدام المشغل المخصص
+const athlete = engine.createEntity('رياضي', LinguisticRole.AGENT, new Map([
+  ['قوة', 50],
+  ['سرعة', 30],
+]));
+
+const customOp = Array.from(engine['customOperators'].values())
+  .find(op => op.symbol === '×2');
+customOp?.apply([athlete]);
+
+console.log('القوة بعد المضاعفة:', athlete.attributes.get('قوة')); // 100
+console.log('السرعة بعد المضاعفة:', athlete.attributes.get('سرعة')); // 60
+```
+
+**ما تعلمته:**
+- ✅ كيفية إنشاء كيانات بأدوار لغوية
+- ✅ كيفية إنشاء معادلات سببية
+- ✅ كيفية تنفيذ المعادلات
+- ✅ كيفية تعريف مشغلات مخصصة
+- ✅ كيفية استخدام المشغلات المخصصة
+
+---
+
 ## 📖 موارد إضافية
 
 - 📘 [أمثلة كاملة](../examples/)
 - 🔧 [مرجع API](./API_REFERENCE.md)
 - 🎯 [تمارين عملية](./EXERCISES.md)
 - 💡 [أفضل الممارسات](./BEST_PRACTICES.md)
-- 🧠 [الوثائق الكاملة للميزات الذكية](../INTELLIGENT_BAYAN_COMPLETE.md) - **جديد!**
-- 🎮 [العروض التوضيحية الذكية](../examples/end-to-end-intelligent-demo.ts) - **جديد!**
+- 🧠 [الوثائق الكاملة للميزات الذكية](../INTELLIGENT_BAYAN_COMPLETE.md)
+- 🎮 [العروض التوضيحية الذكية](../examples/end-to-end-intelligent-demo.ts)
+- 🧮 [دليل المعادلات اللغوية](./LINGUISTIC_EQUATIONS_GUIDE.md) - **جديد!**
+- 🎯 [عرض توضيحي للمعادلات اللغوية](../examples/linguistic-equations-demo.ts) - **جديد!**
 
 ---
 
@@ -617,6 +701,7 @@ for (let i = 0; i < 3; i++) {
 تجمع بين:
 - ✅ البرمجة ثنائية اللغة (عربي + إنجليزي)
 - ✅ البرمجة الهجينة (إجرائية + كائنية + منطقية)
+- ✅ المعادلات اللغوية السببية (20 دور، 8 مشغلات) ⭐ **جديد!**
 - ✅ الذكاء المدمج (تحليل + فهم + تعلم + تكيف)
 
 **ابدأ رحلتك الآن في عالم البرمجة الذكية!**

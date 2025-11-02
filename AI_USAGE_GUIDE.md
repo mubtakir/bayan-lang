@@ -19,10 +19,11 @@
 
 هناك **ملفان مختصران** فقط تحتاجهما:
 
-There are only **two short files** you need:
+There are only **three short files** you need:
 
-1. **[AI_QUICK_REFERENCE.md](./AI_QUICK_REFERENCE.md)** - مرجع سريع (صفحة واحدة) - **Updated with Intelligent Features!**
-2. **[INTELLIGENT_BAYAN_COMPLETE.md](./INTELLIGENT_BAYAN_COMPLETE.md)** - وثائق كاملة للميزات الذكية - **NEW!**
+1. **[AI_QUICK_REFERENCE.md](./AI_QUICK_REFERENCE.md)** - مرجع سريع (صفحة واحدة) - **Updated with Linguistic Equations!**
+2. **[INTELLIGENT_BAYAN_COMPLETE.md](./INTELLIGENT_BAYAN_COMPLETE.md)** - وثائق كاملة للميزات الذكية
+3. **[docs/LINGUISTIC_EQUATIONS_GUIDE.md](./docs/LINGUISTIC_EQUATIONS_GUIDE.md)** - دليل المعادلات اللغوية - **NEW!**
 
 ---
 
@@ -423,14 +424,104 @@ console.log('Patterns Learned:', execution.patternsLearned.length);
 
 ---
 
+## 🧮 مثال 5: المعادلات اللغوية - Example 5: Linguistic Equations
+
+**ما ترسله للذكاء الاصطناعي:**
+
+```
+[Paste AI_QUICK_REFERENCE.md content]
+
+Now write me a Bayan program using linguistic equations:
+- Model social interaction (Ahmed attacks Khalid)
+- Use linguistic roles (Agent, Patient, Action)
+- Apply causal operators (→, ⊢, ⊣)
+- Show result cancellation (patience prevents action)
+- Include custom operators
+```
+
+**ما سيكتبه الذكاء الاصطناعي:**
+
+```typescript
+import {
+  LinguisticEquationEngine,
+  LinguisticRole,
+  CustomOperatorBuilder,
+  PredefinedCustomOperators,
+} from './src/linguistic-equations';
+
+// Create engine
+const engine = new LinguisticEquationEngine();
+
+// Create entities
+const ahmed = engine.createEntity('أحمد', LinguisticRole.AGENT, new Map([
+  ['وحشية', 50],
+  ['aggression', 50],
+]));
+
+const khalid = engine.createEntity('خالد', LinguisticRole.PATIENT, new Map([
+  ['صبر', 80],
+  ['patience', 80],
+]));
+
+const attackAction = engine.createEntity('اعتدى', LinguisticRole.ACTION);
+
+// Register custom operators
+const aggressionOp = PredefinedCustomOperators.aggressionIncrease();
+const patienceOp = PredefinedCustomOperators.patience();
+engine.defineCustomOperator(aggressionOp);
+engine.defineCustomOperator(patienceOp);
+
+// Equation 1: Attack increases aggression
+// أحمد اعتدى على خالد → زادت وحشية أحمد
+const eq1 = engine.createEquation(
+  'Attack increases aggression',
+  'الاعتداء يزيد الوحشية',
+  [ahmed, attackAction, khalid],
+  []
+);
+
+const event1 = engine.executeEquation(eq1);
+console.log(`Ahmed's aggression: ${ahmed.attributes.get('وحشية')}`); // 70
+
+// Equation 2: Patience prevents action
+// خالد صبر فلم يضرب أحمد
+const hitAction = engine.createEntity('ضرب', LinguisticRole.ACTION);
+const eq2 = engine.createEquation(
+  'Patience prevents action',
+  'الصبر يمنع الفعل',
+  [khalid, hitAction],
+  [],
+  [
+    {
+      id: 'patience_check',
+      type: 'ATTRIBUTE',
+      expression: 'khalid.patience >= 70',
+      evaluate: (context) => {
+        const k = Array.from(context.entities.values())
+          .find(e => e.name === 'خالد');
+        return k ? (k.attributes.get('صبر') || 0) >= 70 : false;
+      },
+    },
+  ]
+);
+
+const event2 = engine.executeEquation(eq2);
+console.log(`Action cancelled: ${event2.cancelled}`); // true
+console.log(`Reason: ${event2.reason}`); // Patience condition met
+```
+
+---
+
 **🤖 AI + Bayan = The World's First Intelligent Programming Language!**
 **🤖 الذكاء الاصطناعي + البيان = أول لغة برمجة ذكية في العالم!**
 
-**🌟 New Intelligent Features:**
+**🌟 Intelligent Features:**
 - ✅ Letter meaning analysis - تحليل معاني الحروف
 - ✅ Causal network construction - بناء الشبكات السببية
 - ✅ Semantic optimization - التحسين الدلالي
 - ✅ Real-time learning - التعلم الفوري
+- ✅ Linguistic equations - المعادلات اللغوية ⭐ **NEW!**
+- ✅ Custom operators - المشغلات المخصصة ⭐ **NEW!**
 
 </div>
 
